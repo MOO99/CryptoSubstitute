@@ -1,15 +1,16 @@
 
 from model.clipboard_data import ClipboardData
 from model.crypto_types import BitcoinCrypto
+from model.console_handler import RichConsole
 
 #TODO Class take copy and send it to verify
 
 class ClipboardController:
     def __init__(self):
-        self.clipboard_content = ClipboardData().clipboard_content()
-
-    def print_clipboard_content(self):#TODO This has to be moved to View
-        print(self.clipboard_content) #
+        pass
 
     def check_wallet_format(self, wallet_to_check):
         return BitcoinCrypto().recognize_format(wallet=wallet_to_check)
+    
+    def clipboard_data(self):
+        return ClipboardData().clipboard_content()
