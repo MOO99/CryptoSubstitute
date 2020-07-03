@@ -5,6 +5,7 @@ from view.console_view import ConsoleView
 #TODO ENTER_YOUR_CRYPTOS
 #TODO GET FEEDBACK FROM MVC
 
+ConsoleView().rich_traceback_handler()
 ClipboardController = ClipboardController()
 
 if __name__ == "__main__":
