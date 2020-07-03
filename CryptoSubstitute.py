@@ -1,4 +1,5 @@
 from controller.clipboard_controller import ClipboardController
+from view.console_view import ConsoleView
 
 
 #TODO ENTER_YOUR_CRYPTOS
