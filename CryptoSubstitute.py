@@ -1,19 +1,19 @@
 from controller.clipboard_controller import ClipboardController
+from controller.console_controller import ConsoleController
 from view.console_view import ConsoleView
-
 #TODO ENTER_YOUR_CRYPTOS
 #TODO GET FEEDBACK FROM MVC
 
-ConsoleView().rich_traceback_handler()
-ClipboardController = ClipboardController()
+ConsoleController().rich_traceback_handler()
 
 if __name__ == "__main__":
-    ConsoleView().welcome_message()
-    ClipboardController.print_clipboard_content()                                               #FIXME -----------------------------
+    ConsoleView().show_welcome_message()
+    #ClipboardController().print_clipboard_content()                                               #FIXME -----------------------------
+    ConsoleView().print_clipboard_content()
     print("======================================================")                             #FIXME         Added this
     print("Clipboard was printed above for debug purposes! Will be removed in next versions.")  #FIXME         for debug
     print("======================================================")                             #FIXME         purposes
-    print(ClipboardController.check_wallet_format("You_can_enter_any_wallet_here"))             #FIXME -----------------------------
+    print(ClipboardController().check_wallet_format("You_can_enter_any_wallet_here"))             #FIXME -----------------------------
 
     #TODO enter your addres, leave blank if you don't want to use this one
     #TODO repeat step from above X times, depending on currency(-ies) you want to use
