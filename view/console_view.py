@@ -10,6 +10,6 @@ class ConsoleView:
     def rich_text(self, text):
         ConsoleController().print_rich_text(text=text)
 
-    def print_clipboard_content(self):#TODO This has to be moved to View
+    def print_clipboard_content(self):
      #   RichConsole().print_rich_text(ClipboardData().clipboard_content())
         ConsoleController().print_rich_text(ClipboardData().clipboard_content())
