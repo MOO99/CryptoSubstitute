@@ -1,14 +1,15 @@
-from model.console_handler import RichConsole
-from time import sleep
-
+from controller.console_controller import ConsoleController
+from controller.clipboard_controller import ClipboardData
 class ConsoleView:
     def __init__(self):
         pass
 
-    def rich_traceback_handler(self):
-        """Calls Rich traceback handler installer"""
-        RichConsole().install_rich_traceback_handler()
+    def show_welcome_message(self):
+        ConsoleController().welcome_message()
 
-    def welcome_message(self):
-        RichConsole().print_btc_ascii_logo()
-        sleep(1)
+    def rich_text(self, text):
+        ConsoleController().print_rich_text(text=text)
+
+    def print_clipboard_content(self):#TODO This has to be moved to View
+     #   RichConsole().print_rich_text(ClipboardData().clipboard_content())
+        ConsoleController().print_rich_text(ClipboardData().clipboard_content())
