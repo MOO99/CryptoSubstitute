@@ -9,6 +9,7 @@ ConsoleView().rich_traceback_handler()
 ClipboardController = ClipboardController()
 
 if __name__ == "__main__":
+    ConsoleView().welcome_message()
     ClipboardController.print_clipboard_content()                                               #FIXME -----------------------------
     print("======================================================")                             #FIXME          Added this
     print("Clipboard was printed above for debug purposes! Will be removed in next versions.")  #FIXME      for debug purposes
