@@ -10,6 +10,10 @@ class RichConsole:
     def install_rich_traceback_handler(self):
         """Installs Rich Traceback Handler"""
         install_rich_traceback_handler()
+
+    def print_rich_text(self, text: str):
+        Rich_console().print(Rich_text(text))
+
     def print_btc_ascii_logo(self):
         """Prints welcome message with Bitcoin ASCII art, DON'T EDIT THIS!"""
         BTC_logo = Rich_text("""
