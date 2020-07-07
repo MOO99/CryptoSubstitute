@@ -10,6 +10,9 @@ class ConsoleView:
     def rich_text(self, text):
         ConsoleController().print_rich_text(text=text)
 
+    def rich_input(self, text = ''):
+        return ConsoleController().input_rich_text(text=text)
+
     def print_clipboard_content(self):
      #   RichConsole().print_rich_text(ClipboardData().clipboard_content())
         ConsoleController().print_rich_text(ClipboardData().clipboard_content())
