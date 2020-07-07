@@ -15,3 +15,6 @@ class ConsoleController:
 
     def print_rich_text(self, text):
         RichConsole().print_rich_text(text=text)
+
+    def input_rich_text(self, text):
+        return RichConsole().input_rich_text(text=text)
