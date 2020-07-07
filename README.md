@@ -11,3 +11,5 @@
 # CryptoSubstitute
 
 Description to be added, just wait for it
+
+If used on Linux machine - xclip or xsel has to be installed.
