@@ -14,3 +14,6 @@ class ClipboardController:
     
     def clipboard_data(self):
         return ClipboardData().clipboard_content()
+
+    def paste_new_data(self, text):
+        ClipboardData().copy_wallet(text)
