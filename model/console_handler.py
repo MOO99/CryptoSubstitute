@@ -14,6 +14,9 @@ class RichConsole:
     def print_rich_text(self, text: str):
         Rich_console().print(Rich_text(text))
 
+    def input_rich_text(self, text: str):
+        return Rich_console().input(prompt=text + "\n[bold yellow]Crypto[/bold yellow][bold red]Substitute[/bold red] >>")
+
     def print_btc_ascii_logo(self):
         """Prints welcome message with Bitcoin ASCII art, DON'T EDIT THIS!"""
         BTC_logo = Rich_text("""
