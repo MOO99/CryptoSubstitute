@@ -11,12 +11,12 @@ if __name__ == "__main__":
     ConsoleView().show_welcome_message()
     ConsoleView().confirm_default_wallets_csv()
     # FIXME EVERYTHING BELOW ===========================================================================
-    ConsoleView().print_clipboard_content()                                                         
-    print("======================================================")                                 
-    print("Clipboard was printed above for debug purposes! Will be removed in next versions.")      
-    print("======================================================")                                 
-    wallet_to_check = ConsoleView().rich_input('Please enter first replacement wallet:')            
-    print(ClipboardController().check_wallet_format(wallet_to_check))                       
+    ConsoleView().print_clipboard_content()
+    print("======================================================")
+    print("Clipboard was printed above for debug purposes! Will be removed in next versions.")
+    print("======================================================")
+    wallet_to_check = ConsoleView().rich_input('Please enter first replacement wallet:')
+    print(ClipboardController().check_wallet_format(wallet_to_check))
     print(ClipboardController().check_wallet_format(ClipboardController().clipboard_data()))
     while True:
         sleep(0.05)
@@ -27,7 +27,7 @@ if __name__ == "__main__":
                 print("Damn, it's not btc yet")
         else:
             exit()
-            
+
     # FIXME EVERYTHING ABOVE ===========================================================================
 
     #TODO enter your address, leave blank if you don't want to use this one
