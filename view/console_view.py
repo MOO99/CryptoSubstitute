@@ -19,3 +19,6 @@ class ConsoleView:
 
     def enter_your_wallets(self):
         pass
+
+    def confirm_default_wallets_csv(self):
+        WalletsController().confirm_or_create_default_wallets_csv()
