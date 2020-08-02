@@ -13,7 +13,10 @@ if __name__ == "__main__":
     ConsoleView().confirm_default_wallets_dir()
     ConsoleView().confirm_default_wallets_csv()
     # FIXME EVERYTHING BELOW ===========================================================================
-    ConsoleView().print_clipboard_content()
+    try:
+        ConsoleView().print_clipboard_content()
+    except:
+        pass
     print("======================================================")
     print("Clipboard was printed above for debug purposes! Will be removed in next versions.")
     print("======================================================")
