@@ -34,6 +34,7 @@ class FilesStorage:
 
     def merge_directory_path(self, first_part_or_path, second_part_of_path):
         return os.path.join(first_part_or_path, second_part_of_path)
+
     def return_to_root_directory(self):
         os.chdir(self.root_directory)
 

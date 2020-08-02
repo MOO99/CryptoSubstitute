@@ -25,11 +25,11 @@ class BitcoinCrypto(UnspecifiedCrypto):
 
     def recognize_and_set_format(self, wallet: str): #TODO add controller entry for this one
         if(re.search(self.regex_P2PKH, wallet)):
-            return f"{wallet} : P2PKH : BTC"
+            return f"{wallet}:P2PKH:BTC"
         elif(re.search(self.regex_P2SH, wallet)):
-            return f"{wallet} : P2SH : BTC"
+            return f"{wallet}:P2SH:BTC"
         elif(re.search(self.regex_Bech32, wallet)):
-            return f"{wallet} : Bech32 : BTC"
+            return f"{wallet}:Bech32:BTC"
         else:
             return None
 
