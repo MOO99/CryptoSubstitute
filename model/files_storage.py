@@ -1,7 +1,10 @@
 from pathlib import Path
-import os, csv
+import os
+import csv
+
+
 class FilesStorage:
-    def __init__ (self):
+    def __init__(self):
         self.root_directory = os.getcwd()
 
     def check_if_csv_exists(self, csv_file: str):
@@ -25,7 +28,8 @@ class FilesStorage:
             os.mkdir(path_to_create, 0o777)
             return True
         except OSError:
-            print(f"Creation of directory {path_to_create} failed, make sure it doesn't already exist!")
+            print(
+                f"Creation of directory {path_to_create} failed, make sure it doesn't already exist!")
             pass
         return False
 
@@ -38,6 +42,7 @@ class FilesStorage:
     def return_to_root_directory(self):
         os.chdir(self.root_directory)
 
+
 class WalletsStorage:
     def __init__(self):
         pass
@@ -47,5 +52,6 @@ class WalletsStorage:
         with open(csv_path, 'a', newline='') as working_csv:
             fieldnames = ['wallet', 'format', 'currency']
             csv_writer = csv.DictWriter(working_csv, fieldnames=fieldnames)
-            csv_writer.writerow({'wallet':splitted_wallet[0], 'format':splitted_wallet[1], 'currency':splitted_wallet[2]})
+            csv_writer.writerow(
+                {'wallet': splitted_wallet[0], 'format': splitted_wallet[1], 'currency': splitted_wallet[2]})
             working_csv.close()

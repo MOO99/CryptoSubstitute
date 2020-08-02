@@ -3,6 +3,7 @@ from rich.text import Text as Rich_text
 from rich.console import Console as Rich_console
 from rich.panel import Panel as Rich_panel
 
+
 class RichConsole:
     def __init__(self):
         pass

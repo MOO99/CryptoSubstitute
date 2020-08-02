@@ -1,6 +1,7 @@
 from model.console_handler import RichConsole
 from time import sleep
 
+
 class ConsoleController:
     def __init__(self):
         pass

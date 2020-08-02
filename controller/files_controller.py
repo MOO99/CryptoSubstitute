@@ -1,5 +1,6 @@
 from model.files_storage import FilesStorage, WalletsStorage
 
+
 class WalletsController:
     def __init__(self):
         pass
@@ -18,8 +19,9 @@ class WalletsController:
             FilesStorage().new_file('default.csv')
         FilesStorage().return_to_root_directory()
 
-    def divide_csv_content_into_smaller_ones(self): #TODO
+    def divide_csv_content_into_smaller_ones(self):  # TODO
         pass
 
     def add_wallet_to_default_csv(self, wallet_to_add: str):
-        WalletsStorage().add_wallet_to_csv(csv_path='default.csv', wallet_to_add=wallet_to_add)
+        WalletsStorage().add_wallet_to_csv(
+            csv_path='default.csv', wallet_to_add=wallet_to_add)

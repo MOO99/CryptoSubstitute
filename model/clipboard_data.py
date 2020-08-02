@@ -1,5 +1,6 @@
 from pyperclip import copy, paste
 
+
 class ClipboardData:
     def __init__(self):
         pass

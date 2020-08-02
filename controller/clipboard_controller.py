@@ -3,7 +3,8 @@ from model.clipboard_data import ClipboardData
 from model.crypto_types import BitcoinCrypto
 from model.console_handler import RichConsole
 
-#TODO Class take copy and send it to verify
+# TODO Class take copy and send it to verify
+
 
 class ClipboardController:
     def __init__(self):
@@ -17,6 +18,7 @@ class ClipboardController:
           # return that wallet with type of encryption and currency name
         else:
             return None
+
     def clipboard_data(self):
         return ClipboardData().clipboard_content()
 
