@@ -1,4 +1,3 @@
-
 from model.clipboard_data import ClipboardData
 from model.crypto_types import BitcoinCrypto
 from model.console_handler import RichConsole
@@ -14,8 +13,8 @@ class ClipboardController:
         if BitcoinCrypto().recognize_format(wallet=wallet_to_check) != None:
             return BitcoinCrypto().recognize_and_set_format(wallet=wallet_to_check)
 
-      # if whatever-else-wallet:
-          # return that wallet with type of encryption and currency name
+        # if whatever-else-wallet:
+        # return that wallet with type of encryption and currency name
         else:
             return None
 

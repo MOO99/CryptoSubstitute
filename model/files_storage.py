@@ -18,18 +18,19 @@ class FilesStorage:
         return False
 
     def new_file(self, file_to_create: str):
-        with open(file_to_create, 'x') as new_file:
+        with open(file_to_create, "x") as new_file:
             new_file.close()
         return new_file
 
-    def new_directory(self, path: str = os.getcwd(), directory_name: str = 'NULL'):
+    def new_directory(self, path: str = os.getcwd(), directory_name: str = "NULL"):
         path_to_create = os.path.join(path, directory_name)
         try:
             os.mkdir(path_to_create, 0o777)
             return True
         except OSError:
             print(
-                f"Creation of directory {path_to_create} failed, make sure it doesn't already exist!")
+                f"Creation of directory {path_to_create} failed, make sure it doesn't already exist!"
+            )
             pass
         return False
 
@@ -48,10 +49,15 @@ class WalletsStorage:
         pass
 
     def add_wallet_to_csv(self, csv_path: str, wallet_to_add: str):
-        splitted_wallet = wallet_to_add.split(':')
-        with open(csv_path, 'a', newline='') as working_csv:
-            fieldnames = ['wallet', 'format', 'currency']
+        splitted_wallet = wallet_to_add.split(":")
+        with open(csv_path, "a", newline="") as working_csv:
+            fieldnames = ["wallet", "format", "currency"]
             csv_writer = csv.DictWriter(working_csv, fieldnames=fieldnames)
             csv_writer.writerow(
-                {'wallet': splitted_wallet[0], 'format': splitted_wallet[1], 'currency': splitted_wallet[2]})
+                {
+                    "wallet": splitted_wallet[0],
+                    "format": splitted_wallet[1],
+                    "currency": splitted_wallet[2],
+                }
+            )
             working_csv.close()
