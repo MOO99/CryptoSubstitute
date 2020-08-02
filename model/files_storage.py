@@ -19,7 +19,7 @@ class FilesStorage:
             new_file.close()
         return new_file
 
-    def new_directory(self, path: str = os.getcwd(), directory_name: str = 'wallets'):
+    def new_directory(self, path: str = os.getcwd(), directory_name: str = 'NULL'):
         path_to_create = os.path.join(path, directory_name)
         try:
             os.mkdir(path_to_create, 0o777)
