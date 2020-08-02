@@ -17,3 +17,5 @@ class WalletsController:
         FilesStorage().return_to_root_directory()
     def divide_csv_content_into_smaller_ones(self): #TODO
         pass
+    def add_wallet_to_default_csv(self, wallet_to_add: str):
+        WalletsStorage().add_wallet_to_csv(csv_path='default.csv', wallet_to_add=wallet_to_add)
