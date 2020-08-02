@@ -10,7 +10,7 @@
 
 # CryptoSubstitute
 
-CryptoSubstitute is advanced software for fast realtime clipboard injection.
+CryptoSubstitute is advanced software for fast, real-time clipboard injection.
 
 ## DISCLAIMER
 
