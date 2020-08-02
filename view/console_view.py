@@ -22,3 +22,6 @@ class ConsoleView:
 
     def confirm_default_wallets_csv(self):
         WalletsController().confirm_or_create_default_wallets_csv()
+
+    def confirm_default_wallets_dir(self):
+        WalletsController().confirm_or_create_default_wallets_dir()
