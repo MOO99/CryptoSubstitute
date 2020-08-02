@@ -1,4 +1,5 @@
-from pyperclip import copy, paste
+from pyperclip import copy
+from pyperclip import paste
 
 
 class ClipboardData:

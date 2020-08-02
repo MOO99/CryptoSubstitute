@@ -1,4 +1,5 @@
-from model.files_storage import FilesStorage, WalletsStorage
+from model.files_storage import FilesStorage
+from model.files_storage import WalletsStorage
 
 
 class WalletsController:
