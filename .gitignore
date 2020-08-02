@@ -2,4 +2,4 @@
 
 venv/
 
-wallets/default.csv
+wallets/*
