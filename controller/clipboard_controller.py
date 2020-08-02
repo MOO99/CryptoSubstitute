@@ -1,6 +1,6 @@
 from model.clipboard_data import ClipboardData
-from model.crypto_types import BitcoinCrypto
 from model.console_handler import RichConsole
+from model.crypto_types import BitcoinCrypto
 
 # TODO Class take copy and send it to verify
 

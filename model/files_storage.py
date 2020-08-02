@@ -1,6 +1,6 @@
-from pathlib import Path
-import os
 import csv
+import os
+from pathlib import Path
 
 
 class FilesStorage:

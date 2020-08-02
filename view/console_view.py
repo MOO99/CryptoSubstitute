@@ -1,5 +1,5 @@
-from controller.console_controller import ConsoleController
 from controller.clipboard_controller import ClipboardData
+from controller.console_controller import ConsoleController
 from controller.files_controller import WalletsController
 
 

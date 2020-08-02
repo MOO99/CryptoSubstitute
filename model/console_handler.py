@@ -1,7 +1,7 @@
-from rich.traceback import install as install_rich_traceback_handler
-from rich.text import Text as Rich_text
 from rich.console import Console as Rich_console
 from rich.panel import Panel as Rich_panel
+from rich.text import Text as Rich_text
+from rich.traceback import install as install_rich_traceback_handler
 
 
 class RichConsole:
