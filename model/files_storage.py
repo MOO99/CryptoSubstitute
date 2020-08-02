@@ -25,7 +25,8 @@ class FilesStorage:
             os.mkdir(path_to_create, 0o777)
             return True
         except OSError:
-            print(f'Creation of directory {path_to_create} failed')
+            print(f"Creation of directory {path_to_create} failed, make sure it doesn't already exist!")
+            pass
         return False
 
     def enter_directory(self, directory_to_enter: str):
