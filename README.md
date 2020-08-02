@@ -20,8 +20,8 @@ CryptoSubstitute is advanced software for fast realtime clipboard injection.
 
 The use of the CryptoSubstitute, its forks and any other related resources is **COMPLETE RESPONSIBILITY of the END-USER**. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program. Also we inform you that some of your actions may be **ILLEGAL** and you **CAN NOT** use this software to test person or company without **WRITTEN PERMISSION** from them.
 
-How it works?
- - Targets any cryptocurrency address copied into clipboard and it replaces it by ones you provided via TUI or .csv file
+How does it work?
+ - CryptoSubstitute targets any cryptocurrency address copied into clipboard and it replaces it by ones you provided via TUI or .csv file
 
 Why make it?
  When crypto currencies got popular our world changed forever, because of it's popularity, anonymous but open nature and money it grants - more and more targets get attacked. Our goal is to provide such attacking tool for educational purposes.
