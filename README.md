@@ -26,4 +26,5 @@ How does it work?
 Why make it?
  When crypto currencies got popular our world changed forever, because of it's popularity, anonymous but open nature and money it grants - more and more targets get attacked. Our goal is to provide such attacking tool for educational purposes.
 
+
 If used on Linux machine - xclip or xsel has to be installed.
