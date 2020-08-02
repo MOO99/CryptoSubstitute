@@ -6,6 +6,9 @@
   <a href="https://www.codefactor.io/repository/github/darksecdevelopers/cryptosubstitute"><img src="https://www.codefactor.io/repository/github/darksecdevelopers/cryptosubstitute/badge" alt="CodeFactor" /></a>
   <a href="https://www.codacy.com/gh/DarkSecDevelopers/CryptoSubstitute?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarkSecDevelopers/CryptoSubstitute&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/83d3d3633947461ba73d739fb499163f"/></a>
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FDarkSecDevelopers%2FCryptoSubstitute?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FDarkSecDevelopers%2FCryptoSubstitute.svg?type=shield"/></a>
+  <a href='https://cryptosubstitute.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/cryptosubstitute/badge/?version=latest' alt='Documentation Status' />
+</a>
 </p>
 
 # CryptoSubstitute
