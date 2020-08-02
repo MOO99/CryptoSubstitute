@@ -15,3 +15,5 @@ class WalletsController:
         else:
             FilesStorage().new_file('default.csv')
         FilesStorage().return_to_root_directory()
+    def divide_csv_content_into_smaller_ones(self): #TODO
+        pass
