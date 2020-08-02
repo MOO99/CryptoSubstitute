@@ -1,5 +1,7 @@
-from model.console_handler import RichConsole
 from time import sleep
+
+from model.console_handler import RichConsole
+
 
 class ConsoleController:
     def __init__(self):
