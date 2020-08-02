@@ -10,6 +10,7 @@ ConsoleController().rich_traceback_handler()
 
 if __name__ == "__main__":
     ConsoleView().show_welcome_message()
+    ConsoleView().confirm_default_wallets_dir()
     ConsoleView().confirm_default_wallets_csv()
     # FIXME EVERYTHING BELOW ===========================================================================
     ConsoleView().print_clipboard_content()
