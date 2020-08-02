@@ -17,7 +17,8 @@ class ConsoleView:
         return ConsoleController().input_rich_text(text=text)
 
     def print_clipboard_content(self):
-        ConsoleController().print_rich_text(ClipboardData().clipboard_content())
+        ConsoleController().print_rich_text(
+            ClipboardData().clipboard_content())
 
     def enter_your_wallets(self):
         pass

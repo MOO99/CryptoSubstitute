@@ -24,6 +24,5 @@ class WalletsController:
         pass
 
     def add_wallet_to_default_csv(self, wallet_to_add: str):
-        WalletsStorage().add_wallet_to_csv(
-            csv_path="default.csv", wallet_to_add=wallet_to_add
-        )
+        WalletsStorage().add_wallet_to_csv(csv_path="default.csv",
+                                           wallet_to_add=wallet_to_add)

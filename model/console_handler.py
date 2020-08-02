@@ -17,8 +17,8 @@ class RichConsole:
 
     def input_rich_text(self, text: str):
         return Rich_console().input(
-            prompt=text
-            + "\n[bold yellow]Crypto[/bold yellow][bold red]Substitute[/bold red] >>"
+            prompt=text +
+            "\n[bold yellow]Crypto[/bold yellow][bold red]Substitute[/bold red] >>"
         )
 
     def print_btc_ascii_logo(self):

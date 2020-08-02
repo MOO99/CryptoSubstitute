@@ -22,7 +22,9 @@ class FilesStorage:
             new_file.close()
         return new_file
 
-    def new_directory(self, path: str = os.getcwd(), directory_name: str = "NULL"):
+    def new_directory(self,
+                      path: str = os.getcwd(),
+                      directory_name: str = "NULL"):
         path_to_create = os.path.join(path, directory_name)
         try:
             os.mkdir(path_to_create, 0o777)
@@ -53,11 +55,9 @@ class WalletsStorage:
         with open(csv_path, "a", newline="") as working_csv:
             fieldnames = ["wallet", "format", "currency"]
             csv_writer = csv.DictWriter(working_csv, fieldnames=fieldnames)
-            csv_writer.writerow(
-                {
-                    "wallet": splitted_wallet[0],
-                    "format": splitted_wallet[1],
-                    "currency": splitted_wallet[2],
-                }
-            )
+            csv_writer.writerow({
+                "wallet": splitted_wallet[0],
+                "format": splitted_wallet[1],
+                "currency": splitted_wallet[2],
+            })
             working_csv.close()

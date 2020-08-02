@@ -11,7 +11,8 @@ class ClipboardController:
 
     def check_wallet_format(self, wallet_to_check):
         if BitcoinCrypto().recognize_format(wallet=wallet_to_check) != None:
-            return BitcoinCrypto().recognize_and_set_format(wallet=wallet_to_check)
+            return BitcoinCrypto().recognize_and_set_format(
+                wallet=wallet_to_check)
 
         # if whatever-else-wallet:
         # return that wallet with type of encryption and currency name
