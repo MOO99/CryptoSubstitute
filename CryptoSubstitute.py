@@ -1,5 +1,6 @@
 from controller.clipboard_controller import ClipboardController
 from controller.console_controller import ConsoleController
+from controller.files_controller import WalletsController
 from view.console_view import ConsoleView
 from time import sleep
 #TODO ENTER_YOUR_CRYPTOS
