@@ -38,3 +38,10 @@ class WalletsStorage:
     def __init__(self):
         pass
 
+    def add_wallet_to_csv(self, csv_path: str, wallet_to_add: str):
+        splitted_wallet = wallet_to_add.split(':')
+        with open(csv_path, 'a', newline='') as working_csv:
+            fieldnames = ['wallet', 'format', 'currency']
+            csv_writer = csv.DictWriter(working_csv, fieldnames=fieldnames)
+            csv_writer.writerow({'wallet':splitted_wallet[0], 'format':splitted_wallet[1], 'currency':splitted_wallet[2]})
+            working_csv.close()
