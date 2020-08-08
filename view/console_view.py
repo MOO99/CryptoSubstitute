@@ -5,6 +5,7 @@ from controller.files_controller import WalletsController
 
 class ConsoleView:
     def __init__(self):
+
         pass
 
     def show_welcome_message(self):
