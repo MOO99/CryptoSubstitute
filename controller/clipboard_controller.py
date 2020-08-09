@@ -9,8 +9,9 @@ class ClipboardController:
     def __init__(self):
         pass
 
-    def check_wallet_format(self, wallet_to_check):
-        if BitcoinCrypto().recognize_format(wallet=wallet_to_check) != None:
+    @staticmethod
+    def check_wallet_format(wallet_to_check):
+        if BitcoinCrypto().recognize_format(wallet=wallet_to_check) is not None:
             return BitcoinCrypto().recognize_and_set_format(
                 wallet=wallet_to_check)
 
@@ -19,8 +20,10 @@ class ClipboardController:
         else:
             return None
 
-    def clipboard_data(self):
+    @staticmethod
+    def clipboard_data():
         return ClipboardData().clipboard_content()
 
-    def paste_new_data(self, text):
+    @staticmethod
+    def paste_new_data(text):
         ClipboardData().copy_wallet(text)

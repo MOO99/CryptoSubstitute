@@ -7,16 +7,20 @@ class ConsoleController:
     def __init__(self):
         pass
 
-    def rich_traceback_handler(self):
+    @staticmethod
+    def rich_traceback_handler():
         """Calls Rich traceback handler installer"""
         RichConsole().install_rich_traceback_handler()
 
-    def welcome_message(self):
+    @staticmethod
+    def welcome_message():
         RichConsole().print_btc_ascii_logo()
         sleep(1)
 
-    def print_rich_text(self, text):
+    @staticmethod
+    def print_rich_text(text):
         RichConsole().print_rich_text(text=text)
 
-    def input_rich_text(self, text):
+    @staticmethod
+    def input_rich_text(text):
         return RichConsole().input_rich_text(text=text)

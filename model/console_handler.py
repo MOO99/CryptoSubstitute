@@ -8,21 +8,26 @@ class RichConsole:
     def __init__(self):
         pass
 
-    def install_rich_traceback_handler(self):
+    @staticmethod
+    def install_rich_traceback_handler():
         """Installs Rich Traceback Handler"""
         install_rich_traceback_handler()
 
-    def print_rich_text(self, text: str):
+    @staticmethod
+    def print_rich_text(text: str):
         Rich_console().print(Rich_text(text))
 
-    def input_rich_text(self, text: str):
+    @staticmethod
+    def input_rich_text(text: str):
         return Rich_console().input(
             prompt=text +
             "\n[bold yellow]Crypto[/bold yellow][bold red]Substitute[/bold red] >>"
         )
 
-    def print_btc_ascii_logo(self):
+    @staticmethod
+    def print_btc_ascii_logo():
         """Prints welcome message with Bitcoin ASCII art, DON'T EDIT THIS!"""
+        # noinspection PyPep8Naming
         BTC_logo = Rich_text(
             """
                   ,.=ctE55ttt553tzs.,

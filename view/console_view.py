@@ -8,24 +8,30 @@ class ConsoleView:
 
         pass
 
-    def show_welcome_message(self):
+    @staticmethod
+    def show_welcome_message():
         ConsoleController().welcome_message()
 
-    def rich_text(self, text):
+    @staticmethod
+    def rich_text(text):
         ConsoleController().print_rich_text(text=text)
 
-    def rich_input(self, text=""):
+    @staticmethod
+    def rich_input(text=""):
         return ConsoleController().input_rich_text(text=text)
 
-    def print_clipboard_content(self):
+    @staticmethod
+    def print_clipboard_content():
         ConsoleController().print_rich_text(
             ClipboardData().clipboard_content())
 
     def enter_your_wallets(self):
         pass
 
-    def confirm_default_wallets_csv(self):
+    @staticmethod
+    def confirm_default_wallets_csv():
         WalletsController().confirm_or_create_default_wallets_csv()
 
-    def confirm_default_wallets_dir(self):
+    @staticmethod
+    def confirm_default_wallets_dir():
         WalletsController().confirm_or_create_default_wallets_dir()

@@ -6,8 +6,10 @@ class ClipboardData:
     def __init__(self):
         pass
 
-    def copy_wallet(self, wallet):
+    @staticmethod
+    def copy_wallet(wallet):
         copy(wallet)
 
-    def clipboard_content(self):
+    @staticmethod
+    def clipboard_content():
         return paste()
