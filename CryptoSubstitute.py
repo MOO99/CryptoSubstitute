@@ -27,7 +27,7 @@ if __name__ == "__main__":
     wallet_to_check = ConsoleView().rich_input(
         "Please enter first replacement wallet:")
     checked_wallet = ClipboardController().check_wallet_format(wallet_to_check)
-    if checked_wallet != None:
+    if checked_wallet is not None:
         WalletsController().add_wallet_to_default_csv(
             wallet_to_add=checked_wallet)
     print(checked_wallet)
@@ -35,9 +35,9 @@ if __name__ == "__main__":
         ClipboardController().clipboard_data()))
     while True:
         sleep(0.05)
-        if ClipboardController().check_wallet_format(wallet_to_check) != None:
+        if ClipboardController().check_wallet_format(wallet_to_check) is not None:
             if (ClipboardController().check_wallet_format(
-                    ClipboardController().clipboard_data()) != None):
+                    ClipboardController().clipboard_data()) is not None):
                 ClipboardController().paste_new_data(wallet_to_check)
             else:
                 print("Damn, it's not btc yet")
