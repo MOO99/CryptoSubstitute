@@ -1,4 +1,6 @@
 from models.BTC_crypto_model import BTCCryptoModel
+from views.BTC_crypto_view import BTCCryptoView
+from models.unspecified_crypto_model import UnrecognizedCurrencyError
 import re
 
 
@@ -22,3 +24,13 @@ class BTCCryptoController:
 
     def is_BTC(self, wallet: str):
         return True if self.is_P2PKH(wallet) or self.is_P2SH(wallet) or self.is_Bech32(wallet) else False
+
+    def determine_format(self, wallet: str):
+        if self.is_P2PKH(wallet):
+            return BTCCryptoView().types["p2pkh"]
+        elif self.is_P2SH(wallet):
+            return BTCCryptoView().types["p2sh"]
+        elif self.is_Bech32(wallet):
+            return BTCCryptoView().types["bech32"]
+        else:
+            raise UnrecognizedCurrencyError("Please enter valid BTC wallet!")
