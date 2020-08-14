@@ -5,7 +5,7 @@ import re
 
 
 class BTCCryptoController:
-    def __init__(self,target: str = None, replacement: str = None, model=BTCCryptoModel()):
+    def __init__(self, target: str = None, replacement: str = None, model=BTCCryptoModel()):
         self._model = model
         self._target = target if target is not None else self._model.target
         self._replacement = replacement if replacement is not None else self._model.replacement
@@ -25,12 +25,20 @@ class BTCCryptoController:
     def is_BTC(self, wallet: str):
         return True if self.is_P2PKH(wallet) or self.is_P2SH(wallet) or self.is_Bech32(wallet) else False
 
-    def determine_format(self, wallet: str):
-        if self.is_P2PKH(wallet):
+    def determine_format(self, wallet: str, user_friendly: bool = False):
+        if self.is_P2PKH(wallet) and user_friendly is False:
             return BTCCryptoView().types["p2pkh"]
-        elif self.is_P2SH(wallet):
+        elif self.is_P2PKH(wallet) and user_friendly is True:
+            return BTCCryptoView().user_friendly_types["p2pkh"]
+
+        elif self.is_P2SH(wallet) and user_friendly is False:
             return BTCCryptoView().types["p2sh"]
-        elif self.is_Bech32(wallet):
+        elif self.is_P2SH(wallet) and user_friendly is True:
+            return BTCCryptoView().user_friendly_types["p2sh"]
+
+        elif self.is_Bech32(wallet) and user_friendly is False:
             return BTCCryptoView().types["bech32"]
+        elif self.is_Bech32(wallet) and user_friendly is True:
+            return BTCCryptoView().user_friendly_types["bech32"]
         else:
             raise UnrecognizedCurrencyError("Please enter valid BTC wallet!")

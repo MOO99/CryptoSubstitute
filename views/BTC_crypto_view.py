@@ -11,3 +11,8 @@ class BTCCryptoView:
             "p2sh": _("P2SH"),
             "bech32": _("BECH32")
         }
+        self.user_friendly_types = {
+            "p2pkh": _("Legacy"),
+            "p2sh": _("Segwit wrapped"),
+            "bech32": _("Segwit")
+        }
