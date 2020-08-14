@@ -18,3 +18,9 @@ class UnspecifiedCryptoModel:
     @replacement.setter
     def replacement(self, new_replacement: str):
         self._replacement = new_replacement
+
+
+class UnrecognizedCurrencyError(ValueError):
+    def __init__(self, *args):
+        super().__init__(*args)
+
